@@ -2,7 +2,7 @@
 # .gitignore
 
 # Ignore configuration files
-config/
+/config/
 
 # dependencies
 /node_modules
