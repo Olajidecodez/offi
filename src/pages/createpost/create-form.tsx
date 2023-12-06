@@ -3,8 +3,8 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import {addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../../config/firebase";
+import "./create-form.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-
 
 interface CreateFormData {
     title: string;
@@ -33,7 +33,7 @@ export const CreateForm = () => {
      await addDoc(postsRef, {
       ...data, 
       username: user?.displayName, 
-      userid: user?.uid,
+      userId: user?.uid,
      });
   };
 
