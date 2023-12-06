@@ -4,7 +4,7 @@ import { Main } from './pages/main';
 import { Login } from './pages/login';
 import { Navbar } from './components/navbar';
 import './App.css';
-import { Createpost } from './pages/createpost';
+import { Createpost } from './pages/createpost/createpost';
 
 function App() {
   return (
