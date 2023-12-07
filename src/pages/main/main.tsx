@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Post } from './post';
 
 
-interface Post {
+export interface Post {
   id: string;
   userId: string; 
   title: string;
@@ -28,9 +28,8 @@ export const Main = () => {
   
     return (
       <div>
-      
       {postsList?.map((post) => (
-       <Post />
+       <Post post={post}/>
     ))}
       </div>
     )
