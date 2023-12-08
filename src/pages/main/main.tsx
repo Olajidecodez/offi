@@ -11,6 +11,7 @@ export interface Post {
   username: string;
   description: string;
 }
+
 export const Main = () => {
   const [postsList, setPostsList] = useState<Post[] | null>(null);
   const postsRef = collection(db, "posts");
