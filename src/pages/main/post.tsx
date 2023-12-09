@@ -25,6 +25,10 @@ export const Post = (props: Props) => {
   const getLikes = async() => {
     const data = await getDocs(likesDoc)
     setLikes(data.docs.map((doc) => ({ userId: doc.data().userId })));
+    if (user) { 
+    setLikes((prev) => prev ? [...prev, { userId: user.uid}] : [{ userId: user.uid}]
+    );
+    }
   };
   
   const addLike = async () => {
