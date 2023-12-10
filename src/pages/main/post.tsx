@@ -17,22 +17,23 @@ export const Post = (props: Props) => {
     const { post } = props;
     const [user] = useAuthState(auth);
 
-    const [likes, setLikes] = useState<Like[] | null>(null);
-     const likesRef = collection(db, "likes");
+  const [likes, setLikes] = useState<Like[] | null>(null);
+  
+  const likesRef = collection(db, "likes");
   
   const likesDoc = query(likesRef, where("postId", "==", post.id));
 
   const getLikes = async() => {
     const data = await getDocs(likesDoc)
     setLikes(data.docs.map((doc) => ({ userId: doc.data().userId })));
-    if (user) { 
-    setLikes((prev) => prev ? [...prev, { userId: user.uid}] : [{ userId: user.uid}]
-    );
-    }
   };
   
   const addLike = async () => {
      await addDoc(likesRef, { userId: user?.uid, postId: post.id});
+     if (user) { 
+      setLikes((prev) => prev ? [...prev, { userId: user.uid}] : [{ userId: user?.uid}]
+      );
+     }
   };
   
   const hasUserLiked = likes?.find((like) => like.userId === user?.uid)
