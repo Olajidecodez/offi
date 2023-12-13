@@ -17,13 +17,12 @@ A social media web application
 - Search for posts 
 - Add attachments(image, video, etc)
 - delete posts 
-...
 
 
 ## Getting Started 
 The following contains the steps required to get the application up and running on your local workspace.
 
-## Prerequisites 
+# Prerequisites 
 - Node 
 - npm 
 - Git 
