@@ -39,6 +39,29 @@
   height: 38px; 
 }
 
+.user button {
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #34eb8c;
+  cursor: pointer;
+  color: #fff; 
+  padding: 10px 20px;
+  text-align: center;
+  border: none; 
+}
+
+button {
+  border-radius: 23px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color:  #4caf50;
+  cursor: pointer;
+  color: #fff; 
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+}
 
 .link a:hover {
   text-decoration: underline;
