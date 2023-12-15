@@ -1,6 +1,6 @@
 .navBar {
   background-color: #34eb8c;
-  padding: 15px;
+  padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center; 
@@ -8,7 +8,7 @@
 
 .link {
   display: flex;
-  gap: 15px;
+  gap: 8px;
   margin-left: auto; 
   margin-right: 35px; 
 }
