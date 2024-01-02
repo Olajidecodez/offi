@@ -1,9 +1,6 @@
 # Offi 
 A social media web application
 
-### 
-
-
 ## Features
 - Authentication using google account
 - Create posts
