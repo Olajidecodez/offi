@@ -23,7 +23,10 @@ export const Main = () => {
       );
     };
   
-    useEffect(() => {
+    useEffect(() => { 
+      useEffect(() => {
+        getPosts()
+      })
       getPosts();
     }, []);      
   
